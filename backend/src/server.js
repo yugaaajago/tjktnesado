@@ -7,6 +7,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use('/api/auth', require('./routes/auth'));
+app.use('/api/news', require('./routes/news'));
 
 // route hello
 app.get('/api', (_, res) => res.json({ message: 'Hello from TJKT Backend!' }));
